@@ -1,10 +1,13 @@
-<div class="navbar">
-  <div>
-    <%= link_to "Rails On Blog", root_path %>
-  </div>
-  <div>
-    <%= link_to "Foro", root_path %>
-    <%= link_to "Entrar", new_user_session_path %>
-    <%= link_to "Rails On Blog", root_path %>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <%= link_to "Blog On Rails", root_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <%= render 'shared/dropdown' unless user_signed_in? %>
+    <div class="flex">
+      <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-link me-3" if user_signed_in? %>
+    </div>
   </div>
 </div>
+</nav>

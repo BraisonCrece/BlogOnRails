@@ -1,0 +1,13 @@
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Acceder
+      </a>
+      <ul class="dropdown-menu">
+        <li><%= link_to "Log in", new_user_session_path, class: "dropdown-item" %></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><%= link_to "Sign up", new_user_registration_path, class: "dropdown-item" %></li>
+      </ul>
+    </li>
+  </ul>
