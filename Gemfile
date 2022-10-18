@@ -1,7 +1,11 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+
+
 ruby "3.1.2"
+
+gem 'redcarpet'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
@@ -76,3 +80,5 @@ gem "devise", "~> 4.8"
 gem "cssbundling-rails", "~> 1.1"
 
 gem "tailwindcss-rails", "~> 2.0"
+
+gem "rouge", "~> 4.0"

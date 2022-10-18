@@ -1,7 +1,8 @@
-<div id="<%= dom_id article %>", class='article'>
+<div id="<%= dom_id article %>">
   <h2><%= article.title %></h2>
+  <div class="article-image">
+  </div>
   <div class="article-body">
-    Body:
-    <%= article.body %>
+    <%= markdown(article.body) %>
   </div>
 </div>
