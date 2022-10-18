@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-200;
+  }
+}
+
+*/
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('Pacifico-Regular.ttf');
+  font-display: swap;
+}
+
+.blog-on-rails {
+  font-family: 'Pacifico';
+  font-size: 2.2em;
+  text-shadow: 1px 1px 4px black;
+  text-decoration: none;
+  font-weight: 500;
+  font-style: italic;
+}
+
+#sign-in,
+#sign-up,
+#log-out {
+  text-decoration: none;
+}
+
+#sign-in:hover {
+  color: tomato;
+}
+
+#sign-up:hover {
+  background-color: rgb(244, 125, 102);
+  color: black;
+}
+
+#sign-up {
+  color: whitesmoke;
+}
+
+#log-out {
+  color: whitesmoke;
+}
+
+#log-out:hover {
+  background-color: rgb(255, 177, 177);
+  color: white;
+}
+
+
+
+
+.article,
+.article-body {
+  border: 1px solid black;
+}
+
+.article-body {
+  height: 250px;
+  padding: 10px;
+}
+
+.articles-head {
+  margin: 30px 60px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.articles-head h1,
+.articles-head a {
+  display: inline-block;
+
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 50px;
+  width: 80%;
+}
+
+.articles-index {
+  display: flex;
+  justify-content: center;
+}

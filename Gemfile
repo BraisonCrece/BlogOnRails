@@ -74,3 +74,5 @@ end
 gem "devise", "~> 4.8"
 
 gem "cssbundling-rails", "~> 1.1"
+
+gem "tailwindcss-rails", "~> 2.0"
