@@ -17,6 +17,10 @@
     <%= form.label :body %>
     <%= form.text_area :body, class: 'text-area' %>
   </div>
+  <div class="form m-4">
+    <%= form.label :image %>
+    <%= form.file_field :pictures, multiple: true ,class: 'form-control' %>
+  </div>
   <div class='btn btn-primary'>
     <%= form.submit %>
   </div>
