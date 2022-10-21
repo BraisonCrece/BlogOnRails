@@ -1,0 +1,13 @@
+<div class="comment">
+  <div class="comment-header">
+    <div class="comment-author">
+      <%= comment.user.email %>
+    </div>
+    <div class="comment-date">
+      <%= time_ago_in_words(comment.created_at) %>
+    </div>
+  </div>
+  <div class="comment-body">
+    <%= comment.body %>
+  </div>
+</div>

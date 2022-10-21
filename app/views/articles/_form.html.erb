@@ -20,6 +20,9 @@
   <div class="form m-4">
     <%= form.label :image %>
     <%= form.file_field :pictures, multiple: true ,class: 'form-control' %>
+    <% article.pictures.each do |picture| %>
+      <%= link_to image_tag(picture), data: {turbo_method: :delete} %>
+    <% end %>
   </div>
   <div class='btn btn-primary'>
     <%= form.submit %>

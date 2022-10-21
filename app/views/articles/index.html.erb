@@ -6,7 +6,12 @@
   <div class="articles">
     <% @articles.each do |article| %>
       <div class='article'>
-        <%= render article %>
+        <h2><%= article.title %></h2>
+        <div class="article-images">
+          <% article.pictures.each do |image| %>
+            <%= image_tag image.variant(resize_to_limit: [300, 300]) %>
+          <% end %>
+        </div>
         <%= link_to "Show this article", article if user_signed_in? %>
       </div>
     <% end %>
