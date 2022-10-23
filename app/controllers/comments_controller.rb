@@ -17,15 +17,17 @@ class CommentsController < ApplicationController
 
   # GET /articles/:id/edit
   def edit
+    
   end
 
   # POST /comments
   def create
+    @article = Article.find(params[:article_id])
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
     @comment.article_id = params[:article_id]
     if @comment.save
-      redirect_to article_url(@comment.article), notice: "Comment was successfully created."
+      
     else
       render :new, status: :unprocessable_entity
     end
@@ -34,7 +36,7 @@ class CommentsController < ApplicationController
   # PATCH/PUT /comments/:id
   def update
     if @comment.update(comment_params)
-      redirect_to comment_url(@comment), notice: "Comment was successfully updated."
+      redirect_to article_url(@comment.article), notice: "Comment was successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end
@@ -43,13 +45,13 @@ class CommentsController < ApplicationController
   # DELETE /comments/:id
   def destroy
     @comment.destroy
-    redirect_to comments_url, notice: "Comment was successfully destroyed."
+    redirect_to article_url(@comment.article), notice: "Comment was successfully destroyed."
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
-      @comment = Comment.find(params[:id])
+      @comment = Comment.find_by(article_id: params[:article_id], id: params[:id])
     end
 
     # Only allow a list of trusted parameters through.

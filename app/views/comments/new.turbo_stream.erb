@@ -1,0 +1,3 @@
+<%= turbo_stream.update 'comment-form' do %>
+  <%= render 'comments/form', locals: { article: @comment.article_id } %>
+<% end %>

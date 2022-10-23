@@ -1,0 +1,6 @@
+<%= turbo_stream.update 'comment-form' do %>
+  <%= render 'comments/form', locals: { article: @article } %>
+<% end %>
+<%= turbo_stream.update 'article-comments-list' do %>
+  <%= render partial: 'comments/comment', locals: { article: @article} %>
+<% end %>
