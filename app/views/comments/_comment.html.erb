@@ -1,13 +1,24 @@
-<div class="comment">
-  <div class="comment-header">
-    <div class="comment-author">
+<div class="comment mt-4 mb-1">
+  <div class="comment-header d-flex flex-row justify-content-between">
+    <div class="comment-author text-primary block">
       <%= comment.user.email %>
     </div>
-    <div class="comment-date">
-      <%= time_ago_in_words(comment.created_at) %>
+    <div class="comment-date block">
+      <span class="fs-6 fw-lighter text-black-50 text-opacity-50">posted <%= time_ago_in_words(comment.created_at) %> ago.</span>
     </div>
   </div>
   <div class="comment-body">
-    <%= comment.body %>
+    <% frame_id = comment.id %>
+    <%= form_with(model: comment, url: article_comment_path(comment.article_id, comment)) do %>
+      <%= turbo_frame_tag frame_id do %>
+        <div class="flex justify-content-between">
+          <%= comment.body %>
+          <%= link_to image_tag('edit.svg', width:25, height: 25), edit_article_comment_path(comment.article_id, comment), class: 'in-line' %>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
+  <div class="ml-4">
+    <%= link_to 'delete', article_comment_path(comment.article_id, comment), data: { turbo_method: :delete } %>
+  </div>
+<% end %>

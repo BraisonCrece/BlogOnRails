@@ -82,3 +82,5 @@ gem "cssbundling-rails", "~> 1.1"
 gem "tailwindcss-rails", "~> 2.0"
 
 gem "rouge", "~> 4.0"
+
+gem "byebug", "~> 11.1", :groups => [:development, :test]
