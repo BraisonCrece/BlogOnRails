@@ -22,11 +22,12 @@ class CommentsController < ApplicationController
 
   # POST /comments
   def create
+    @article = Article.find(params[:article_id])
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
     @comment.article_id = params[:article_id]
     if @comment.save
-      redirect_to article_url(@comment.article), notice: "Comment was successfully created."
+      
     else
       render :new, status: :unprocessable_entity
     end

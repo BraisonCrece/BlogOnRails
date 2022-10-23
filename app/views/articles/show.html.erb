@@ -7,7 +7,14 @@
   </div>
 </div>
 <div class="article-comments mt-5">
-  <h3>Comments</h3>
-  <%= render partial: 'comments/form', locals: { article: @article, comment: Comment.new } %>
-  <%= render partial: 'comments/comment', collection: @article.comments %>
+  <div class="flex justify-content-between">
+    <h3>Comments</h3>
+    <p><%= pluralize(@article.comments.count,'comment') %></p>
+  </div>
+  <div id="comment-form">
+    <%= render partial: 'comments/form', locals: { article: @article } %>
+  </div>
+  <div id="article-comments-list">
+    <%= render partial: 'comments/comment', locals: { article: @article} %>
+  </div>
 </div>

@@ -1,5 +1,5 @@
 <div class="comment-form mt-4">
-  <%= form_with(model: [article, comment], local: true) do |form| %>
+  <%= form_with model: Comment.new, url: article_comments_path(@article) do |form| %>
     <div class="form-group">
       <%= form.label :body %>
       <%= form.text_area :body, class: 'form-control' %>
