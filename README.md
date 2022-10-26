@@ -15,6 +15,7 @@ My main goal is to make the platform a **win/win** (users access to interesting 
 ### It will consist of the following sections:
 
 - Informative articles about using Ruby on Rails.
+- MarkDown + code highlighting
 - Articles organized by tags
 - User login system
 - Internal messaging
@@ -22,3 +23,6 @@ My main goal is to make the platform a **win/win** (users access to interesting 
 - comments in the articles
 - favorites button
 - article search bar
+
+
+![image](https://user-images.githubusercontent.com/104019638/197993507-3c4bfd27-003d-44f2-b95d-9baab5673586.png)
