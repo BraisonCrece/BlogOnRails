@@ -23,6 +23,9 @@ My main goal is to make the platform a **win/win** (users access to interesting 
 - comments in the articles
 - favorites button
 - article search bar
+- filtered articles by tag
+- select theme switch button (dark theme)
+- select language (ES/EN)
 
 
 ![image](https://user-images.githubusercontent.com/104019638/197993507-3c4bfd27-003d-44f2-b95d-9baab5673586.png)
