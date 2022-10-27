@@ -4,3 +4,6 @@
 <%= turbo_stream.update 'article-comments-list' do %>
   <%= render partial: 'comments/comment', locals: { article: @article} %>
 <% end %>
+<%= turbo_stream.update 'article-count' do %>
+  <%= pluralize(@article.comments.count,'comment') %>
+<% end %>

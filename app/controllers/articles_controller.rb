@@ -43,6 +43,7 @@ class ArticlesController < ApplicationController
   # DELETE /articles/:id
   def destroy
     @article.destroy
+    @article.tags.clear
     redirect_to articles_url, notice: "Article was successfully destroyed."
   end
 
@@ -54,6 +55,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:title, :body, pictures: [])
+      params.require(:article).permit(:title, :body, :tag_list, pictures: [])
     end
 end

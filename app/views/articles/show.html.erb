@@ -9,7 +9,7 @@
 <div class="article-comments mt-5">
   <div class="flex justify-content-between">
     <h3>Comments</h3>
-    <p><%= pluralize(@article.comments.count,'comment') %></p>
+    <p id="article-count"><%= pluralize(@article.comments.count,'comment') %></p>
   </div>
   <div id="comment-form">
     <%= render partial: 'comments/form', locals: { article: @article } %>
